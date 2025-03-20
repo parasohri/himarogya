@@ -378,7 +378,9 @@ app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({ message: "Internal Server Error", error: err.message });
 });
-
+app.get('/',()=>{
+  res.send("hello");
+ })
 // Start the server
 server.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
